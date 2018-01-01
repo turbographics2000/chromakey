@@ -45,7 +45,6 @@ function getColorDistance(rgb1, rgb2) {
 };
 
 function chromaKey() {
-    videoBContext.drawImage(videoB, 0, 0, WIDTH, HEIGHT);
     var imageData = videoBContext.getImageData(0, 0, WIDTH, HEIGHT);
     var data = imageData.data;
 
@@ -74,6 +73,8 @@ function chromaKey() {
 
 function blendDraw() {
     videoAContext.drawImage(videoA, 0, 0, WIDTH, HEIGHT);
+    videoBContext.drawImage(videoB, 0, 0, WIDTH, HEIGHT);
+
     chromakeyContext.drawImage(videoACanvas, 0, 0,  WIDTH, HEIGHT);
     chromaKey();
     //chromakeyContext.drawImage(videoB, 0, 0, chromakeyCanvas.width, chromakeyCanvas.height);
