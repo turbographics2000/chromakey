@@ -70,15 +70,15 @@ function chromaKey() {
     }
     // 書き換えたdataをimageDataにもどし、描画する
     imageData.data = data;
-    chromakeyContext.putImageData(imageData, 0, 0);
+    videoBContext.putImageData(imageData, 0, 0);
 };
 
 function blendDraw() {
     videoAContext.drawImage(videoA, 0, 0, WIDTH, HEIGHT);
-    videoBContext.drawImage(videoB, 0, 0, WIDTH, HEIGHT);
-
     chromaKey();
+
     chromakeyContext.drawImage(videoACanvas, 0, 0,  WIDTH, HEIGHT);
+    chromakeyContext.drawImage(videoBCanvas, 0, 0,  WIDTH, HEIGHT);
     requestAnimationFrame(blendDraw);
 }
 
