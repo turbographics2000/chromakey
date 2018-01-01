@@ -75,6 +75,7 @@ function chromaKey() {
 
 function blendDraw() {
     videoAContext.drawImage(videoA, 0, 0, WIDTH, HEIGHT);
+    videoBContext.drawImage(videoB, 0, 0, WIDTH, HEIGHT);
     chromaKey();
 
     //chromakeyContext.drawImage(videoACanvas, 0, 0,  WIDTH, HEIGHT);
