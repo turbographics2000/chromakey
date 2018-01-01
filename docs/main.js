@@ -22,6 +22,7 @@ var colorDistance = 30;
 function prepareVideo(video, canvas, context, videoURL) {
     video.crossOrigin = 'anonymous';
     video.muted = true;
+    video.loop = true;
     return new Promise((resolve, reject) => {
         video.onloadedmetadata = evt => {
             canvas.width = WIDTH;
