@@ -23,6 +23,7 @@ function prepareVideo(video, canvas, context, videoURL) {
     video.crossOrigin = 'anonymous';
     video.muted = true;
     video.loop = true;
+    document.body.appendChild(video);
     return new Promise((resolve, reject) => {
         video.onloadedmetadata = evt => {
             canvas.width = WIDTH;
