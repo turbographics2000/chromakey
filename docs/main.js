@@ -19,6 +19,8 @@ document.body.appendChild(chromakeyCanvas);
 var chromaKeyColor = {r:0xe9,  g:0xe9, b:0xe9};
 var colorDistance = 30;
 
+distance.oninput = evt => colorDistance = distance.value;
+
 function prepareVideo(video, canvas, context, videoURL) {
     video.crossOrigin = 'anonymous';
     video.muted = true;
