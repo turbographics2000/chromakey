@@ -79,7 +79,6 @@ function blendDraw() {
 
     chromaKey();
     chromakeyContext.drawImage(videoACanvas, 0, 0,  WIDTH, HEIGHT);
-    //chromakeyContext.drawImage(videoB, 0, 0, chromakeyCanvas.width, chromakeyCanvas.height);
     requestAnimationFrame(blendDraw);
 }
 
